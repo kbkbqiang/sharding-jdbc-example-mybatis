@@ -59,6 +59,10 @@ public class OrderService {
         orderRepository.update(Lists.newArrayList(10, 11));
     }
     
+    public void addOrder(Order criteria){
+    	orderRepository.insert(criteria);
+    }
+    
     public void fooServiceWithFailure() {
         fooService();
         throw new IllegalArgumentException("failed");
